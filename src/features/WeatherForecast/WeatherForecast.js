@@ -1,7 +1,11 @@
 import './WeatherForecast.scss';
 
 function WeatherForecast() {
-  return '___WeatherForecast___';
+  return (
+    <div className="weather-forecast">
+        ___WeatherForecast___
+    </div>
+  );
 }
 
 export default WeatherForecast;

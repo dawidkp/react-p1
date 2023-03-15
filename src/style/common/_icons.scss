@@ -1,0 +1,48 @@
+@use "../helpers/functions";
+
+@include functions.dynamic-icon("layout-board", "../../../assets/icons/layout-board.svg");
+
+:root {
+  @include functions.responsive-value(--icon-small, 14px);
+  @include functions.responsive-value(--icon-regular, 18px);
+  @include functions.responsive-value(--icon-medium, 22px);
+  @include functions.responsive-value(--icon-large, 26px);
+  @include functions.responsive-value(--icon-x-large, 46px);
+
+  // Icon
+  --icon-color: var(--typography-dark);
+}
+
+[class^="icon"] {
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: var(--icon-regular);
+  height: var(--icon-regular);
+}
+
+[class^="icon"].icon--responsive {
+  width: 100%;
+  height: 100%;
+}
+
+[class^="icon"].icon--small {
+  width: var(--icon-small);
+  height: var(--icon-small);
+}
+
+[class^="icon"].icon--medium {
+  width: var(--icon-medium);
+  height: var(--icon-medium);
+}
+
+[class^="icon"].icon--large {
+  width: var(--icon-large);
+  height: var(--icon-large);
+}
+
+[class^="icon"].icon--x-large {
+  width: var(--icon-x-large);
+  height: var(--icon-x-large);
+}

@@ -1,0 +1,40 @@
+@use "../helpers/functions";
+
+:root {
+  // Primary colors
+  --primary-blue: #1aafd0;
+  --primary-green: #3be8b0;
+  --primary-purple: #6a67ce;
+  --primary-orange: #ffb900;
+  --primary-red: #fc636b;
+
+  // secondary colors
+  --light-blue: #d9f4fa;
+
+  // Gray palette
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #ADB5BD;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343A40;
+  --gray-900: #212529;
+
+  --light: #ffffff;
+  --link: var(--primary-blue);
+
+  // Sidebar
+  --sidebar-menu-width: calc(8 * var(--spacing));
+  --sidebar-child-menu-item-active-bg: rgba(26, 175, 208, .15);
+
+  // Other
+  --background-color: var(--gray-100);
+  --overlay-background: rgba(0, 0, 0, .65);
+  --item-opacity: .8;
+
+  --border-stroke-1: 1px;
+  --border-radius: calc(.5 * var(--spacing));
+  --transition-all: all ease-out 150ms;
+}

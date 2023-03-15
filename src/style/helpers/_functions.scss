@@ -1,0 +1,24 @@
+@use "sass:math";
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@mixin responsive-value($name, $value, $ratio: 0.85) {
+  $relative-value: strip-unit($value * math.div(100, 2200));
+  #{$name}: max(min(#{$relative-value + "vw"}, #{$value}), #{$ratio * $value});
+}
+
+@mixin dynamic-icon($class-name, $path) {
+  #{".icon-"}#{$class-name} {
+    -webkit-mask: url("#{$path}") no-repeat 100% 100%;
+    mask: url("#{$path}") no-repeat 100% 100%;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-color: var(--icon-color);
+  }
+}

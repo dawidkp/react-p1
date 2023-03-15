@@ -1,0 +1,15 @@
+@use "../helpers/functions";
+
+:root {
+  // Size
+  @include functions.responsive-value(--spacing, 8px);
+
+  // Typography
+  @include functions.responsive-value(--typography-x-small, 12px);
+  @include functions.responsive-value(--typography-small, 14px);
+  @include functions.responsive-value(--typography-regular, 16px);
+  @include functions.responsive-value(--typography-medium, 18px);
+  @include functions.responsive-value(--typography-large, 20px);
+
+  --typography-dark: var(--gray-900);
+}
