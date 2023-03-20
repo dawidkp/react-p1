@@ -8,7 +8,7 @@ function WeatherForecast() {
   const [weather,setWeather] = useState([]);
 
   function fetchWeatherData() {
-    return fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=temperature_2m_max,temperature_2m_min,windspeed_10m_max&timezone=auto")
+    return fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,rain_sum,windspeed_10m_max&timezone=Europe%2FBerlin")
     .then(response => response.json())
     .then(data => setWeather(data))
   }
@@ -17,15 +17,23 @@ function WeatherForecast() {
     fetchWeatherData()
   }, [])
 
+  
 
   return (
     <section className="weather__forecast">
+      <h1>5 days forecast</h1>
       <div className="weather__box">
-        <h1>5 days forecast</h1>
-        <div>
+        <div className="weather__left">
           <h2>{weather?.daily?.time[0]}</h2>
           <h2>{weather.latitude}</h2>
           <h2>{weather?.daily?.temperature_2m_max[0]}℃</h2>
+        </div>
+        <div className="weather__right">
+          <h2>Feels like: {weather?.daily?.apparent_temperature_max[0]}℃</h2>
+          <h2>Rainfall: {weather?.daily?.rain_sum[0]} mm</h2>
+          <h2>Wind: {weather?.daily?.windspeed_10m_max[0]} km/h</h2>
+          <h2>Sunrise: {weather?.daily?.sunrise[0].substring(11)} AM</h2>
+          <h2>Sunset: {weather?.daily?.sunset[0].substring(11)} PM</h2>
         </div>
       </div>
     </section>
