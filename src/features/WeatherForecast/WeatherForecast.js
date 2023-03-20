@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-
 import './WeatherForecast.scss';
 
 function WeatherForecast() {
@@ -22,12 +21,14 @@ function WeatherForecast() {
   return (
     <section className="weather__forecast">
       <h1>5 days forecast</h1>
+
       <div className="weather__box">
         <div className="weather__left">
           <h2>{weather?.daily?.time[0]}</h2>
           <h2>{weather.latitude}</h2>
           <h2>{weather?.daily?.temperature_2m_max[0]}℃</h2>
         </div>
+
         <div className="weather__right">
           <h2>Feels like: {weather?.daily?.apparent_temperature_max[0]}℃</h2>
           <h2>Rainfall: {weather?.daily?.rain_sum[0]} mm</h2>
@@ -35,6 +36,7 @@ function WeatherForecast() {
           <h2>Sunrise: {weather?.daily?.sunrise[0].substring(11)} AM</h2>
           <h2>Sunset: {weather?.daily?.sunset[0].substring(11)} PM</h2>
         </div>
+
       </div>
     </section>
   );
