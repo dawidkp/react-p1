@@ -16,20 +16,18 @@ function WeatherForecast() {
     fetchWeatherData()
   }, [])
 
-  
-
   return (
-    <section className="weather__forecast">
-      <h1>5 days forecast</h1>
+    <section className="weather">
+      <h1 className="weather__header">5 days forecast</h1>
 
-      <div className="weather__box">
-        <div className="weather__left">
+      <div className="weather__boxes">
+        <div className="weather__box">
           <h2>{weather?.daily?.time[0]}</h2>
           <h2>{weather.latitude}</h2>
           <h2>{weather?.daily?.temperature_2m_max[0]}℃</h2>
         </div>
 
-        <div className="weather__right">
+        <div className="weather__box">
           <h2>Feels like: {weather?.daily?.apparent_temperature_max[0]}℃</h2>
           <h2>Rainfall: {weather?.daily?.rain_sum[0]} mm</h2>
           <h2>Wind: {weather?.daily?.windspeed_10m_max[0]} km/h</h2>
