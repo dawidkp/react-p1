@@ -9,7 +9,7 @@
   margin: 0 auto;
 
   &__header {
-    padding: 1rem 2rem;
+    padding: 1rem 2rem; 
 
   }
 
@@ -20,7 +20,16 @@
     margin: 0 auto;
   } 
 
-  // &__box {
-   
-  // }
+  &__5days__box {
+    display: flex; 
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  &__little__box {
+    width: 8rem;
+    height: auto;
+    padding: 1rem;
+    border-radius: 3px;
+    background-color: var(--primary-blue);
+  }
 }
