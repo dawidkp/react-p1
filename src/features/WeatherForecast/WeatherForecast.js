@@ -58,7 +58,7 @@ function WeatherForecast() {
           <h3>Rainfall: {weather?.daily?.rain_sum[4]} mm</h3>
         </div>
         <div className="weather__little__box">
-        <h3>{weather?.daily?.time[5]}</h3>
+          <h3>{weather?.daily?.time[5]}</h3>
           <h3>{weather?.daily?.temperature_2m_max[5]}℃</h3>
           <h3>Rainfall: {weather?.daily?.rain_sum[5]} mm</h3>
         </div>
