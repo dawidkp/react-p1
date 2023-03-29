@@ -1,5 +1,6 @@
 @use "/src/style/common/variables";
 
+
 .weather {
   width: auto;
   height: auto;
@@ -32,5 +33,11 @@
     border-radius: 3px;
     background-color: var(--primary-blue);
     margin: 1rem;
+  }
+  &__sunny {
+    height: 2rem;
+    width: 2rem;
+    background-image: url("../../../assets/images/sunny.png") ;
+    background-size: cover;
   }
 }
