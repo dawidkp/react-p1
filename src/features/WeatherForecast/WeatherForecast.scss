@@ -1,8 +1,43 @@
-.weather-forecast {
-  width: 200px;
-  height: 200px;
+@use "/src/style/common/variables";
+
+
+.weather {
+  width: auto;
+  height: auto;
   border: 1px solid #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 5px;
+  background-color: var(--light-blue);
+  margin: 0 auto;
+
+  &__header {
+    padding: 1rem 2rem; 
+
+  }
+
+  &__boxes {
+    display: flex;
+    padding: 2rem ;
+    justify-content: space-between  ;
+    margin: 0 auto;
+  } 
+
+  &__5days__box {
+    display: flex; 
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  &__little__box {
+    width: 8rem;
+    height: auto;
+    padding: 1rem;
+    border-radius: 3px;
+    background-color: var(--primary-blue);
+    margin: 1rem;
+  }
+  &__sunny {
+    height: 2rem;
+    width: 2rem;
+    background-image: url("../../../assets/images/sunny.png") ;
+    background-size: cover;
+  }
 }
