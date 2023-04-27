@@ -5,7 +5,7 @@ const Input = ({
     title,
     placeholder,
     label,
-    autofocus,
+    autoFocus,
     disabled,
     errorMessage,
     onChange,
@@ -15,6 +15,22 @@ const Input = ({
     const handleChange = (e) => {
         onChange && onChange(e.target.value);
     };
+
+    return (
+        <div>
+            {label && <label>{label}</label>}
+            <input
+                type = {type}
+                title = {title}
+                placeholder = {placeholder}
+                autoFocus = {autoFocus}
+                disabled = {disabled}
+                errorMessage = {errorMessage}
+                value = {value}
+                onChange = {handleChange}
+            />
+        </div>
+    )
 }
 
 export default Input;
