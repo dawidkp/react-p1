@@ -12,7 +12,9 @@ const Input = ({
     value
 
 }) => {
-   
+    const handleChange = (e) => {
+        onChange && onChange(e.target.value);
+    };
 }
 
 export default Input;
