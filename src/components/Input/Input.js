@@ -18,7 +18,9 @@ const Input = ({
 
     return (
         <div>
+
             {label && <label>{label}</label>}
+
             <input
                 type = {type}
                 title = {title}
@@ -29,6 +31,7 @@ const Input = ({
                 value = {value}
                 onChange = {handleChange}
             />
+            
         </div>
     )
 }
